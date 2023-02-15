@@ -1,0 +1,34 @@
+﻿<Window x:Class="DateTimeCalc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DateTimeCalc"
+        mc:Ignorable="d"
+        Title="DateTime Calculator" Height="300" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="5">
+            <TextBlock>Start Time</TextBlock>
+            <TextBox Name="txtStartTime" Margin="5"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="5">
+            <TextBlock>End Time</TextBlock>
+            <TextBox Name="txtEndTime" Margin="5"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="5">
+            <TextBlock>Elapsed Time</TextBlock>
+            <TextBlock Name="txtEllapsedTime" Margin="5"></TextBlock>
+        </StackPanel>
+        <Button Name="btnCalculate" Grid.Row="3" Width="150" Margin="5" Click="btnCalculate_Click" IsDefault="True">Calculate Difference</Button>
+        <Button Name="btnCopyToClipboard" Grid.Row="4" Width="150" Margin="5" Click="btnCopyToClipboard_Click" >Copy To Clipboard</Button>
+        <Button Name="btnClear" Grid.Row="5" Width="150" Margin="5" Click="btnClear_Click">Clear</Button>
+    </Grid>
+</Window>
